@@ -15,6 +15,9 @@
 		A79EB4791C86F89E0023D01A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79EB4771C86F89E0023D01A /* LaunchScreen.storyboard */; };
 		A79EB4841C86F89E0023D01A /* MyInstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79EB4831C86F89E0023D01A /* MyInstagramTests.swift */; };
 		A79EB48F1C86F89E0023D01A /* MyInstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79EB48E1C86F89E0023D01A /* MyInstagramUITests.swift */; };
+		A7B68F9E1CA188B80047F2F1 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B68F9D1CA188B80047F2F1 /* TimelineViewController.swift */; };
+		A7B68FA01CA188DB0047F2F1 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B68F9F1CA188DB0047F2F1 /* PhotoViewController.swift */; };
+		A7B68FA21CA188FE0047F2F1 /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B68FA11CA188FE0047F2F1 /* FriendSearchViewController.swift */; };
 		A7BC55351C9B1E2D0055BE1C /* Kumulos.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BC55321C9B1E2D0055BE1C /* Kumulos.m */; };
 		A7BC55361C9B1E2D0055BE1C /* Kumulos_ARMv7-Combined.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BC55331C9B1E2D0055BE1C /* Kumulos_ARMv7-Combined.a */; };
 		A7BC55381C9B26200055BE1C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BC55371C9B26200055BE1C /* SystemConfiguration.framework */; };
@@ -52,6 +55,9 @@
 		A79EB48A1C86F89E0023D01A /* MyInstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyInstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79EB48E1C86F89E0023D01A /* MyInstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInstagramUITests.swift; sourceTree = "<group>"; };
 		A79EB4901C86F89E0023D01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7B68F9D1CA188B80047F2F1 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		A7B68F9F1CA188DB0047F2F1 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		A7B68FA11CA188FE0047F2F1 /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
 		A7BC55301C9B1E2C0055BE1C /* MyInstagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyInstagram-Bridging-Header.h"; sourceTree = "<group>"; };
 		A7BC55311C9B1E2D0055BE1C /* Kumulos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Kumulos.h; path = myInstagramBindings/iOS_5.0_ARC/Kumulos.h; sourceTree = "<group>"; };
 		A7BC55321C9B1E2D0055BE1C /* Kumulos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Kumulos.m; path = myInstagramBindings/iOS_5.0_ARC/Kumulos.m; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 		A79EB46D1C86F89E0023D01A /* MyInstagram */ = {
 			isa = PBXGroup;
 			children = (
+				A7B68F9C1CA1886C0047F2F1 /* ViewControllers */,
 				A79EB46E1C86F89E0023D01A /* AppDelegate.swift */,
 				A79EB4701C86F89E0023D01A /* ViewController.swift */,
 				A79EB4721C86F89E0023D01A /* Main.storyboard */,
@@ -164,6 +171,16 @@
 				A79EB4901C86F89E0023D01A /* Info.plist */,
 			);
 			path = MyInstagramUITests;
+			sourceTree = "<group>";
+		};
+		A7B68F9C1CA1886C0047F2F1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A7B68F9D1CA188B80047F2F1 /* TimelineViewController.swift */,
+				A7B68F9F1CA188DB0047F2F1 /* PhotoViewController.swift */,
+				A7B68FA11CA188FE0047F2F1 /* FriendSearchViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		A7BC552F1C9B1DFF0055BE1C /* KumulosAPI */ = {
@@ -361,8 +378,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A79EB4711C86F89E0023D01A /* ViewController.swift in Sources */,
+				A7B68F9E1CA188B80047F2F1 /* TimelineViewController.swift in Sources */,
 				A7BC55351C9B1E2D0055BE1C /* Kumulos.m in Sources */,
 				A79EB46F1C86F89E0023D01A /* AppDelegate.swift in Sources */,
+				A7B68FA21CA188FE0047F2F1 /* FriendSearchViewController.swift in Sources */,
+				A7B68FA01CA188DB0047F2F1 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
