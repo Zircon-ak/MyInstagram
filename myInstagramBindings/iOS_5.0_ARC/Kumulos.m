@@ -2,7 +2,7 @@
 //  Kumulos.m
 //  Kumulos
 //
-//  Created by Kumulos Bindings Compiler on Mar 16, 2016
+//  Created by Kumulos Bindings Compiler on Mar 24, 2016
 //  Copyright DPU All rights reserved.
 //
 
@@ -29,6 +29,28 @@
     return self;
  }
 
+
+-(KSAPIOperation*) uploadPhotoWithImageData:(NSData*)imageData andPostData:(NSUInteger)postData{
+
+    
+     NSMutableDictionary* theParams = [[NSMutableDictionary alloc]init];
+            [theParams setValue:imageData forKey:@"imageData"];
+                    [theParams setValue:[NSNumber numberWithInt:postData] forKey:@"postData"];
+                        
+    KSAPIOperation* newOp = [[KSAPIOperation alloc]initWithAPIKey:theAPIKey andSecretKey:theSecretKey andMethodName:@"uploadPhoto" andParams:theParams];
+    [newOp setDelegate:self];
+    [newOp setUseSSL:useSSL];
+            
+    //we pass the method signature for the kumulosProxy callback on this thread
+ 
+    [newOp setCallbackSelector:@selector( kumulosAPI: apiOperation: uploadPhotoDidCompleteWithResult:)];
+    [newOp setSuccessCallbackMethodSignature:[self methodSignatureForSelector:@selector(apiOperation: didCompleteWithResult:)]];
+    [newOp setErrorCallbackMethodSignature:[self methodSignatureForSelector:@selector(apiOperation: didFailWithError:)]];
+    [opQueue addOperation:newOp];
+ 
+    return newOp;
+    
+}
 
 -(KSAPIOperation*) createUserWithUsername:(NSString*)username andPassword:(NSString*)password andEmail:(NSString*)email andAuthData:(NSString*)authData{
 
