@@ -10,6 +10,9 @@ import UIKit
 
 class PhotoViewController: UIViewController {
 
+    @IBOutlet weak var txtDescription: UITextField!
+    @IBOutlet weak var imgCurrentPhoto: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +24,12 @@ class PhotoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func btPostOnClick(sender: AnyObject) {
+    }
 
+    @IBAction func btCancelOnClick(sender: AnyObject) {
+        self.tabBarController?.selectedViewController = self.tabBarController?.viewControllers?.first
+    }
     /*
     // MARK: - Navigation
 

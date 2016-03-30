@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="A0e-GR-yHU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="A0e-GR-yHU">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -169,11 +169,55 @@
                     <view key="view" contentMode="scaleToFill" id="CCO-ry-tFb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRa-Lp-cjD">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="New Post" id="zIq-4U-edu">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="xwB-rF-ZcC">
+                                            <connections>
+                                                <action selector="btCancelOnClick:" destination="dOC-zJ-QQM" id="frD-Yp-Gve"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Post" id="WQw-qW-AE4">
+                                            <connections>
+                                                <action selector="btPostOnClick:" destination="dOC-zJ-QQM" id="Y0F-Sx-EYP"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bVx-79-wkk">
+                                <rect key="frame" x="20" y="142" width="560" height="401"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XfY-pW-TjV">
+                                <rect key="frame" x="20" y="90" width="560" height="30"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lRa-Lp-cjD" secondAttribute="trailing" id="79f-R1-H9a"/>
+                            <constraint firstItem="lRa-Lp-cjD" firstAttribute="centerX" secondItem="XfY-pW-TjV" secondAttribute="centerX" id="CqV-DH-eop"/>
+                            <constraint firstItem="XfY-pW-TjV" firstAttribute="leading" secondItem="bVx-79-wkk" secondAttribute="leading" id="Umu-ag-x4S"/>
+                            <constraint firstItem="bVx-79-wkk" firstAttribute="top" secondItem="XfY-pW-TjV" secondAttribute="bottom" constant="22" id="UtV-o5-Bk5"/>
+                            <constraint firstItem="XfY-pW-TjV" firstAttribute="trailing" secondItem="bVx-79-wkk" secondAttribute="trailing" id="cc1-mj-SQc"/>
+                            <constraint firstItem="lRa-Lp-cjD" firstAttribute="leading" secondItem="CCO-ry-tFb" secondAttribute="leading" id="h09-uD-5e9"/>
+                            <constraint firstItem="XfY-pW-TjV" firstAttribute="leading" secondItem="CCO-ry-tFb" secondAttribute="leadingMargin" id="hwK-cz-Acc"/>
+                            <constraint firstItem="XfY-pW-TjV" firstAttribute="top" secondItem="lRa-Lp-cjD" secondAttribute="bottom" constant="26" id="niC-bZ-Vbv"/>
+                            <constraint firstItem="T9I-hd-hY5" firstAttribute="top" secondItem="bVx-79-wkk" secondAttribute="bottom" constant="8" symbolic="YES" id="rYP-Dd-yma"/>
+                            <constraint firstItem="lRa-Lp-cjD" firstAttribute="top" secondItem="rTF-1h-3HW" secondAttribute="bottom" id="wUr-3E-Gj3"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="Camera" id="lDG-oc-Pkf">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="imgCurrentPhoto" destination="bVx-79-wkk" id="31l-SO-fRY"/>
+                        <outlet property="txtDescription" destination="XfY-pW-TjV" id="ZYW-dn-XCQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rT-vq-eFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
