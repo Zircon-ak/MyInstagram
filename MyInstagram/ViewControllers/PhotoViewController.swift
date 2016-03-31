@@ -17,6 +17,11 @@ class PhotoViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //self.resizedImageData()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.resizedImageData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,10 +30,39 @@ class PhotoViewController: UIViewController {
     }
     
     @IBAction func btPostOnClick(sender: AnyObject) {
+        let objKumulos = Kumulos()
+        let imageNSData = UIImageJPEGRepresentation(imgCurrentPhoto.image! , 1)
+        objKumulos.createPostWithDescription(txtDescription.text, andPostOwner: 1, andImageData: imageNSData)
+        
     }
 
     @IBAction func btCancelOnClick(sender: AnyObject) {
         self.tabBarController?.selectedViewController = self.tabBarController?.viewControllers?.first
+    }
+    
+    func resizedImageData() {
+        if let originalImage = imgCurrentPhoto.image {
+            let resize : CGFloat = 256.0
+            let actualWidth = originalImage.size.width
+            let actualHeight = originalImage.size.height
+            var divBy : CGFloat
+            var newWidth : CGFloat
+            var newHeight : CGFloat
+            if actualWidth > actualWidth {
+                divBy = (actualWidth / resize)
+                newWidth = resize
+                newHeight = (actualHeight / divBy)
+            } else {
+                divBy = (actualHeight / resize)
+                newHeight = resize
+                newWidth = (actualWidth / divBy)
+            }
+            
+            let rect = CGRectMake(0.0, 0.0, newWidth, newHeight)
+            UIGraphicsBeginImageContext(rect.size)
+            originalImage.drawInRect(rect)
+            imgCurrentPhoto.image = UIGraphicsGetImageFromCurrentImageContext()
+        }
     }
     /*
     // MARK: - Navigation

@@ -187,27 +187,29 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bVx-79-wkk">
-                                <rect key="frame" x="20" y="142" width="560" height="401"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XfY-pW-TjV">
                                 <rect key="frame" x="20" y="90" width="560" height="30"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bVx-79-wkk">
+                                <rect key="frame" x="172" y="142" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="1H4-es-Nx4"/>
+                                    <constraint firstAttribute="width" constant="256" id="xly-JY-wNq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="lRa-Lp-cjD" secondAttribute="trailing" id="79f-R1-H9a"/>
                             <constraint firstItem="lRa-Lp-cjD" firstAttribute="centerX" secondItem="XfY-pW-TjV" secondAttribute="centerX" id="CqV-DH-eop"/>
-                            <constraint firstItem="XfY-pW-TjV" firstAttribute="leading" secondItem="bVx-79-wkk" secondAttribute="leading" id="Umu-ag-x4S"/>
                             <constraint firstItem="bVx-79-wkk" firstAttribute="top" secondItem="XfY-pW-TjV" secondAttribute="bottom" constant="22" id="UtV-o5-Bk5"/>
-                            <constraint firstItem="XfY-pW-TjV" firstAttribute="trailing" secondItem="bVx-79-wkk" secondAttribute="trailing" id="cc1-mj-SQc"/>
+                            <constraint firstItem="bVx-79-wkk" firstAttribute="centerX" secondItem="CCO-ry-tFb" secondAttribute="centerX" id="WFz-Vl-JbE"/>
                             <constraint firstItem="lRa-Lp-cjD" firstAttribute="leading" secondItem="CCO-ry-tFb" secondAttribute="leading" id="h09-uD-5e9"/>
                             <constraint firstItem="XfY-pW-TjV" firstAttribute="leading" secondItem="CCO-ry-tFb" secondAttribute="leadingMargin" id="hwK-cz-Acc"/>
                             <constraint firstItem="XfY-pW-TjV" firstAttribute="top" secondItem="lRa-Lp-cjD" secondAttribute="bottom" constant="26" id="niC-bZ-Vbv"/>
-                            <constraint firstItem="T9I-hd-hY5" firstAttribute="top" secondItem="bVx-79-wkk" secondAttribute="bottom" constant="8" symbolic="YES" id="rYP-Dd-yma"/>
                             <constraint firstItem="lRa-Lp-cjD" firstAttribute="top" secondItem="rTF-1h-3HW" secondAttribute="bottom" id="wUr-3E-Gj3"/>
                         </constraints>
                     </view>

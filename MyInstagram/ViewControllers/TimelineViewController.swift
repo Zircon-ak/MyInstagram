@@ -20,9 +20,6 @@ class TimelineViewController: UIViewController {
     func takePhoto(photoViewController : PhotoViewController){
         photoTakingHelper = PhotoTakingHelper(viewController: self.tabBarController!) { (image:UIImage?) in
             if let image = image {
-                //let objKumulos = Kumulos()
-                //let imageNSData = UIImageJPEGRepresentation(image, 1)
-                //objKumulos.uploadPhotoWithImageData(imageNSData, andPostData: 1)
                 self.tabBarController?.selectedViewController = photoViewController
                 photoViewController.imgCurrentPhoto.image = image
                 photoViewController.txtDescription.text = nil
