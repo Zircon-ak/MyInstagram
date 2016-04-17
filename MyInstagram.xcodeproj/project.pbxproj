@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E0B09489FD64B19C08F0BC2 /* Pods_MyInstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB61D8A3FF181E797C4FC9D /* Pods_MyInstagram.framework */; };
+		A75CAC201CC35D6B0050C25E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75CAC1F1CC35D6B0050C25E /* PostTableViewCell.swift */; };
 		A79EB46F1C86F89E0023D01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79EB46E1C86F89E0023D01A /* AppDelegate.swift */; };
 		A79EB4711C86F89E0023D01A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79EB4701C86F89E0023D01A /* ViewController.swift */; };
 		A79EB4741C86F89E0023D01A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79EB4721C86F89E0023D01A /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A75CAC1F1CC35D6B0050C25E /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A79EB46B1C86F89E0023D01A /* MyInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79EB46E1C86F89E0023D01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A79EB4701C86F89E0023D01A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				A7B68FA41CA321910047F2F1 /* FriendSearchViewController.swift */,
 				A7B68FA51CA321910047F2F1 /* PhotoViewController.swift */,
 				A7B68FA61CA321910047F2F1 /* TimelineViewController.swift */,
+				A75CAC1F1CC35D6B0050C25E /* PostTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 				A79EB4711C86F89E0023D01A /* ViewController.swift in Sources */,
 				A7BC55351C9B1E2D0055BE1C /* Kumulos.m in Sources */,
 				A79EB46F1C86F89E0023D01A /* AppDelegate.swift in Sources */,
+				A75CAC201CC35D6B0050C25E /* PostTableViewCell.swift in Sources */,
 				A7B68FA91CA321910047F2F1 /* TimelineViewController.swift in Sources */,
 				A7B68FAC1CA322610047F2F1 /* PhotoTakingHelper.swift in Sources */,
 				A7B68FA81CA321910047F2F1 /* PhotoViewController.swift in Sources */,
