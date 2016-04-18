@@ -42,7 +42,7 @@
 -(KSAPIOperation*) uploadPhotoWithImageData:(NSData*)imageData andPostData:(NSUInteger)postData;
     
    
--(KSAPIOperation*) createPostWithDescription:(NSString*)description andPostOwner:(NSUInteger)postOwner andImageData:(NSNumber*)imageData;
+-(KSAPIOperation*) createPostWithDescription:(NSString*)description andPostOwner:(NSUInteger)postOwner andImageData:(NSData*)imageData;
     
    
 -(KSAPIOperation*) getPostsWithPostOwner:(NSUInteger)postOwner;

@@ -160,16 +160,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="359"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x9o-XI-Cw5">
-                                                    <rect key="frame" x="140" y="39" width="320" height="320"/>
-                                                </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="90s-m8-K6e">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="90s-m8-K6e">
                                                     <rect key="frame" x="140" y="8" width="320" height="31"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="b83-Us-QCg"/>
+                                                        <constraint firstAttribute="width" constant="320" id="iOR-Fu-aSe"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x9o-XI-Cw5">
+                                                    <rect key="frame" x="140" y="47" width="320" height="320"/>
+                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="90s-m8-K6e" firstAttribute="trailing" secondItem="x9o-XI-Cw5" secondAttribute="trailing" id="LtE-5b-UyR"/>
+                                                <constraint firstItem="x9o-XI-Cw5" firstAttribute="top" secondItem="90s-m8-K6e" secondAttribute="bottom" constant="8" symbolic="YES" id="PYU-j5-VxX"/>
+                                                <constraint firstItem="90s-m8-K6e" firstAttribute="leading" secondItem="x9o-XI-Cw5" secondAttribute="leading" id="WAC-6X-or9"/>
+                                                <constraint firstItem="90s-m8-K6e" firstAttribute="centerX" secondItem="Hu0-I4-cvO" secondAttribute="centerX" id="ktf-TU-boO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="x9o-XI-Cw5" secondAttribute="bottom" constant="-16" id="o2a-Mf-vFA"/>
+                                                <constraint firstItem="90s-m8-K6e" firstAttribute="top" secondItem="Hu0-I4-cvO" secondAttribute="topMargin" id="xmV-AP-PZi"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="postImage" destination="x9o-XI-Cw5" id="4gl-5t-JAo"/>
