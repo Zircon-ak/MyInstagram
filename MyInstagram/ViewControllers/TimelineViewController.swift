@@ -61,9 +61,7 @@ extension TimelineViewController : UITableViewDataSource{
             cell.txtDescription.text = listDictionary.valueForKey("description") as! String
             
             let photos = listDictionary.valueForKey("photos") as! NSArray
-            
             let firstPhoto = photos.firstObject as! NSDictionary
-           
             let imageData = firstPhoto.valueForKey("imageData") as! NSData
             
             cell.postImage.image = UIImage(data: imageData)
